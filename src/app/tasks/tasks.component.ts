@@ -6,20 +6,17 @@ import { ButtonModule } from 'primeng/button';
 
 @Component({
 	selector: 'app-tasks',
-	imports: [
-		NgForOf,
-		ButtonModule,
-	],
+	imports: [ NgForOf, ButtonModule ],
 	templateUrl: './tasks.component.html',
 	styleUrl: './tasks.component.css',
 })
 export class TasksComponent implements OnInit {
-	tasks: Task[] = [];
+	public tasks: Task[] = [];
 
-	constructor(private taskService: TasksService) { }
+	public constructor(private taskService: TasksService) { }
 
-	ngOnInit(): void {
-		this.taskService.getTasks().subscribe((tasks: any[]) => {
+	public ngOnInit(): void {
+		this.taskService.getTasks().subscribe((tasks: Task[]) => {
 			this.tasks = tasks;
 		});
 	}

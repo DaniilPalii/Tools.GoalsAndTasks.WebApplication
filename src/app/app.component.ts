@@ -8,6 +8,4 @@ import { TasksComponent } from './tasks/tasks.component';
 	templateUrl: './app.component.html',
 	styleUrl: './app.component.css',
 })
-export class AppComponent {
-	title = 'Goals And Tasks';
-}
+export class AppComponent { }
