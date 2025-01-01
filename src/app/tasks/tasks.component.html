@@ -1,7 +1,28 @@
-<p>Tasks:</p>
-<ul>
-	<li *ngFor="let task of tasks">
-		{{ task.title }}
-	</li>
-</ul>
-<p-button label="Check"></p-button>
+<h1>Tasks</h1>
+
+<p-table [value]="tasks" [tableStyle]="{ 'min-width': '50rem' }">
+	<ng-template #header>
+		<tr>
+			<th>Id</th>
+			<th>Title</th>
+			<th>Start date</th>
+			<th>Start time</th>
+			<th>Due date</th>
+			<th>Due time</th>
+			<th>Is complete</th>
+		</tr>
+	</ng-template>
+	<ng-template #body let-task>
+		<tr>
+			<td>{{ task.id }}</td>
+			<td>{{ task.title }}</td>
+			<td>{{ task.startDate }}</td>
+			<td>{{ task.startTime }}</td>
+			<td>{{ task.dueDate }}</td>
+			<td>{{ task.dueTime }}</td>
+			<td>{{ task.isComplete }}</td>
+		</tr>
+	</ng-template>
+</p-table>
+
+<p-button label="Add task"></p-button>
