@@ -3,10 +3,11 @@ import { Task } from './task';
 import { TasksService } from './tasks.service';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
+import { Card } from 'primeng/card';
 
 @Component({
 	selector: 'app-tasks',
-	imports: [ ButtonModule, TableModule ],
+	imports: [ ButtonModule, TableModule, Card ],
 	templateUrl: './tasks.component.html',
 	styleUrl: './tasks.component.css',
 })
