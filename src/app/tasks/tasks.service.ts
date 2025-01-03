@@ -5,7 +5,7 @@ import { Task } from './task';
 
 @Injectable({ providedIn: 'root' })
 export class TasksService {
-	private apiUrl = 'https://goalsandtasksapi.azurewebsites.net/tasks';
+	private apiUrl: string = 'https://goalsandtasksapi.azurewebsites.net/tasks';
 
 	constructor(private http: HttpClient) { }
 

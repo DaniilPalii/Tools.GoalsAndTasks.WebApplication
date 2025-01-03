@@ -1,0 +1,11 @@
+:root {
+	color-scheme: light dark;
+
+	color: light-dark(
+		var(--app-surface-900),
+		var(--app-surface-50));
+
+	background-color: light-dark(
+		var(--app-surface-50),
+		var(--app-surface-950));
+}

@@ -1,0 +1,28 @@
+:root {
+	/* Naming of variables responds to PrimeNg components but with custom "app" prefix. */
+
+	--app-surface-0: #ffffff;
+	--app-surface-50: #f3f3f3;
+	--app-surface-100: #e7e7e8;
+	--app-surface-200: #cfd0d0;
+	--app-surface-300: #b7b8b9;
+	--app-surface-400: #9fa1a1;
+	--app-surface-500: #87898a;
+	--app-surface-600: #6e7173;
+	--app-surface-700: #565a5b;
+	--app-surface-800: #3e4244;
+	--app-surface-900: #262b2c;
+	--app-surface-950: #0e1315;
+
+	--app-primary-50: #ecfdf5;
+	--app-primary-100: #d1fae5;
+	--app-primary-200: #a7f3d0;
+	--app-primary-300: #6ee7b7;
+	--app-primary-400: #34d399;
+	--app-primary-500: #10b981;
+	--app-primary-600: #059669;
+	--app-primary-700: #047857;
+	--app-primary-800: #065f46;
+	--app-primary-900: #064e3b;
+	--app-primary-950: #022c22;
+}
