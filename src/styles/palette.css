@@ -2,7 +2,7 @@
 	/* Naming of variables responds to PrimeNg components but with custom "app" prefix. */
 
 	/*
-		Soho palette from
+		Soho palette copied from
 		https://github.com/primefaces/primeng.git
 		/apps/showcase/components/layout/configurator/app.configurator.component.ts
 	*/
@@ -19,15 +19,16 @@
 	--app-surface-900: #2c2c34;
 	--app-surface-950: #16161d;
 
-	--app-primary-50: #ecfdf5;
-	--app-primary-100: #d1fae5;
-	--app-primary-200: #a7f3d0;
-	--app-primary-300: #6ee7b7;
-	--app-primary-400: #34d399;
-	--app-primary-500: #10b981;
-	--app-primary-600: #059669;
-	--app-primary-700: #047857;
-	--app-primary-800: #065f46;
-	--app-primary-900: #064e3b;
-	--app-primary-950: #022c22;
+	/* Indigo palette from Aura PrimeNg theme */
+	--app-primary-50: #eef2ff;
+	--app-primary-100: #e0e7ff;
+	--app-primary-200: #c7d2fe;
+	--app-primary-300: #a5b4fc;
+	--app-primary-400: #818cf8;
+	--app-primary-500: #6366f1;
+	--app-primary-600: #4f46e5;
+	--app-primary-700: #4338ca;
+	--app-primary-800: #3730a3;
+	--app-primary-900: #312e81;
+	--app-primary-950: #1e1b4b;
 }
