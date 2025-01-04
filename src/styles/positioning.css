@@ -1,0 +1,14 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0; /* Override browser default style */
+}
+
+app-root {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}

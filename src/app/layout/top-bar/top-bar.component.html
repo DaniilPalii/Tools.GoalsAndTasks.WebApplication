@@ -1,0 +1,20 @@
+<p-toolbar styleClass="top-bar">
+
+	<ng-template #start>
+		<p-button class="mr-2" icon="pi pi-plus" severity="secondary" text/>
+		<p-button class="mr-2" icon="pi pi-print" severity="secondary" text/>
+		<p-button icon="pi pi-upload" severity="secondary" text/>
+	</ng-template>
+
+	<ng-template #center>
+		<p-iconfield iconPosition="left">
+			<p-inputicon styleClass="pi pi-search"/>
+			<input pInputText placeholder="Search" type="text"/>
+		</p-iconfield>
+	</ng-template>
+
+	<ng-template #end>
+		<p-button label="Settings"/>
+	</ng-template>
+
+</p-toolbar>

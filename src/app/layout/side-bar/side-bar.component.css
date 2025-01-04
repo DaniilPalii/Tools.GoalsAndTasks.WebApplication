@@ -1,0 +1,18 @@
+/* Encapsulation disabled */
+
+.app-side-bar {
+	height: 100%;
+	width: 100%;
+}
+
+.app-side-bar .p-panel {
+	height: 100%;
+
+	border-radius: 0;
+	border-top: none;
+	border-left: none;
+	border-bottom: none;
+
+	padding-right: 15px;
+	padding-left: 15px;
+}
