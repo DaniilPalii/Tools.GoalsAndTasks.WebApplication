@@ -19,16 +19,16 @@
 	--app-surface-900: #2c2c34;
 	--app-surface-950: #16161d;
 
-	/* Indigo palette from Aura PrimeNg theme */
-	--app-primary-50: #eef2ff;
-	--app-primary-100: #e0e7ff;
-	--app-primary-200: #c7d2fe;
-	--app-primary-300: #a5b4fc;
-	--app-primary-400: #818cf8;
-	--app-primary-500: #6366f1;
-	--app-primary-600: #4f46e5;
-	--app-primary-700: #4338ca;
-	--app-primary-800: #3730a3;
-	--app-primary-900: #312e81;
-	--app-primary-950: #1e1b4b;
+	/* Amber palette from Aura PrimeNg theme */
+	--app-primary-50: #fffbeb;
+	--app-primary-100: #fef3c7;
+	--app-primary-200: #fde68a;
+	--app-primary-300: #fcd34d;
+	--app-primary-400: #fbbf24;
+	--app-primary-500: #f59e0b;
+	--app-primary-600: #d97706;
+	--app-primary-700: #b45309;
+	--app-primary-800: #92400e;
+	--app-primary-900: #78350f;
+	--app-primary-950: #451a03;
 }
