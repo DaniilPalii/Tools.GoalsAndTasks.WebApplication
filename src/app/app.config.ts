@@ -23,6 +23,6 @@ export const appConfig: ApplicationConfig = {
 					prefix: 'app',
 				},
 			},
-		})
+		}),
 	],
 };
