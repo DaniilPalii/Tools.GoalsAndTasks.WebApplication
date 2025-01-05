@@ -2,12 +2,12 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { Panel } from 'primeng/panel';
 
 @Component({
-	selector: 'app-side-bar',
+	selector: 'app-navigation',
 	imports: [ Panel ],
-	templateUrl: './side-bar.component.html',
-	styleUrl: './side-bar.component.css',
+	templateUrl: './navigation.component.html',
+	styleUrl: './navigation.component.css',
 	encapsulation: ViewEncapsulation.None,
 })
-export class SideBarComponent {
+export class NavigationComponent {
 
 }

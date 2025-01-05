@@ -1,17 +1,15 @@
-.container-under-top-bar {
-	flex-grow: 1;
-	display: flex;
-}
-
-.left-panel {
-	flex-grow: 0;
-	flex-shrink: 0;
-	flex-basis: 300px;
-}
-
-.content-container {
-	flex: 1;
+.content {
 	padding-top: 20px;
 	padding-left: 35px;
 	padding-right: 35px;
+}
+
+.horizontal-flex {
+	display: flex;
+	flex-direction: row;
+}
+
+.vertical-flex {
+	display: flex;
+	flex-direction: column;
 }

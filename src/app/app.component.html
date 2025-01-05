@@ -1,11 +1,17 @@
-<app-top-bar/>
+<div class="vertical-flex" style="height: 100%; overflow: hidden">
 
-<div class="container-under-top-bar">
-	<div class="left-panel">
-		<app-side-bar/>
-	</div>
+	<header style="position: sticky; top: 0; z-index: 1000">
+		<app-header/>
+	</header>
 
-	<div class="content-container">
-		<app-tasks/>
+	<div class="horizontal-flex" style="flex-grow: 1; overflow: hidden">
+
+		<nav style="flex-shrink: 0; flex-basis: 300px">
+			<app-navigation/>
+		</nav>
+
+		<div class="content" style="flex-grow: 1; overflow: auto">
+			<router-outlet/>
+		</div>
 	</div>
 </div>

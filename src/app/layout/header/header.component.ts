@@ -9,12 +9,12 @@ import { InputIcon } from 'primeng/inputicon';
 import { InputText } from 'primeng/inputtext';
 
 @Component({
-	selector: 'app-top-bar',
+	selector: 'app-header',
 	imports: [ CommonModule, FormsModule, RouterModule, Toolbar, Button, IconField, InputIcon, InputText ],
-	templateUrl: './top-bar.component.html',
-	styleUrl: './top-bar.component.css',
+	templateUrl: './header.component.html',
+	styleUrl: './header.component.css',
 	encapsulation: ViewEncapsulation.None,
 })
-export class TopBarComponent {
+export class HeaderComponent {
 
 }

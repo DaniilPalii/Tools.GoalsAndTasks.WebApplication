@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Task } from './task';
+import { TaskDetails } from '../transfer-values/task-details';
 
 @Injectable({ providedIn: 'root' })
-export class TasksService {
+export class TaskService {
 	private apiUrl: string = 'https://goalsandtasksapi.azurewebsites.net/tasks';
 
-	constructor(private http: HttpClient) { }
+	public constructor(private http: HttpClient) { }
 
-	getTasks(): Observable<Task[]> {
-		return this.http.get<Task[]>(this.apiUrl);
+	public getTasks(): Observable<TaskDetails[]> {
+		return this.http.get<TaskDetails[]>(this.apiUrl);
 	}
 }

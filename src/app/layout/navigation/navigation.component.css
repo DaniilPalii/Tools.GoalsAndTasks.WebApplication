@@ -1,11 +1,11 @@
 /* Encapsulation disabled */
 
-.app-side-bar {
+app-navigation {
 	height: 100%;
 	width: 100%;
 }
 
-.app-side-bar .p-panel {
+app-navigation .p-panel {
 	height: 100%;
 
 	border-radius: 0;

@@ -1,4 +1,4 @@
-export interface Task {
+export interface TaskDetails {
 	id: number;
 	title: string;
 	startDate?: Date;

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { TasksComponent } from './tasks/tasks.component';
-import { TopBarComponent } from './layout/top-bar/top-bar.component';
-import { SideBarComponent } from './layout/side-bar/side-bar.component';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './layout/header/header.component';
+import { NavigationComponent } from './layout/navigation/navigation.component';
 
 @Component({
 	selector: 'app-root',
-	imports: [ TasksComponent, TopBarComponent, SideBarComponent ],
+	imports: [ RouterOutlet, HeaderComponent, NavigationComponent ],
 	templateUrl: './app.component.html',
 	styleUrl: './app.component.css',
 })
