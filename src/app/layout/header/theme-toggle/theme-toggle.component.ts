@@ -3,7 +3,7 @@ import { Select } from 'primeng/select';
 import { FormsModule } from '@angular/forms';
 import { ThemeIconComponent } from './theme-icon/theme-icon.component';
 import { Theme } from '../../../theming/theme';
-import { ThemeService } from '../../../theming/theme.service';
+import { ThemeService } from 'app/theming/theme.service';
 
 @Component({
 	selector: 'app-theme-toggle',
