@@ -2,9 +2,8 @@
 
 app-header .p-toolbar {
 	border-radius: 0;
-	border-top: none;
-	border-left: none;
-	border-right: none;
+	border: none;
+	background-color: transparent;
 }
 
 .app-title {

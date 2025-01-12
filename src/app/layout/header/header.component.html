@@ -1,7 +1,7 @@
 <p-toolbar>
 
 	<ng-template #start>
-		<p-button class="mr-2" icon="pi pi-bars" severity="secondary" text/>
+		<p-button icon="pi pi-bars" severity="secondary" text/>
 		<h1 class="app-title">Goals and Tasks</h1>
 	</ng-template>
 
@@ -13,9 +13,7 @@
 	</ng-template>
 
 	<ng-template #end>
-		<p-button class="mr-2" icon="pi pi-plus" severity="secondary" text/>
-		<p-button class="mr-2" icon="pi pi-print" severity="secondary" text/>
-		<p-button icon="pi pi-upload" severity="secondary" text/>
+		<app-theme-toggle/>
 	</ng-template>
 
 </p-toolbar>

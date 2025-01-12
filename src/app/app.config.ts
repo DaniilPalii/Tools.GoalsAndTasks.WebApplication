@@ -5,8 +5,7 @@ import { provideClientHydration, withEventReplay } from '@angular/platform-brows
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
-import { definePreset } from '@primeng/themes';
-import auraPreset from '@primeng/themes/aura';
+import { ThemeService } from '../services/theme.service';
 
 export const appConfig: ApplicationConfig = {
 	providers: [
@@ -16,13 +15,7 @@ export const appConfig: ApplicationConfig = {
 		provideHttpClient(withFetch()),
 		provideAnimationsAsync(),
 		providePrimeNG({
-			theme: {
-				preset: definePreset(auraPreset),
-				options: {
-					cssLayer: { name: 'primeng' },
-					prefix: 'app',
-				},
-			},
+			theme: ThemeService.createThemeWithAutomaticDarkMode(),
 		}),
 	],
 };

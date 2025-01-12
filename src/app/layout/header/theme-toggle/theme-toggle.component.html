@@ -1,0 +1,13 @@
+<p-select
+	[(ngModel)]="selectedTheme"
+	[options]="themes"
+	styleClass="hidden-dropdown"
+>
+	<ng-template #item let-option>
+		<app-theme-icon [theme]="option"/>
+	</ng-template>
+
+	<ng-template #selectedItem let-selectedOption>
+		<app-theme-icon [theme]="selectedOption"/>
+	</ng-template>
+</p-select>

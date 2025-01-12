@@ -1,0 +1,17 @@
+<span>
+	<ng-container [ngSwitch]="theme()">
+		<ng-container *ngSwitchCase="Theme.system">
+			<span class="pi pi-sun"></span>
+			<span>&nbsp;/&nbsp;</span>
+			<span class="pi pi-moon"></span>
+		</ng-container>
+
+		<ng-container *ngSwitchCase="Theme.light">
+			<span class="pi pi-sun"></span>
+		</ng-container>
+
+		<ng-container *ngSwitchCase="Theme.dark">
+			<span class="pi pi-moon"></span>
+		</ng-container>
+	</ng-container>
+</span>

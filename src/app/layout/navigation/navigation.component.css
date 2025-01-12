@@ -1,17 +1,12 @@
 /* Encapsulation disabled */
 
 app-navigation {
-	height: 100%;
 	width: 100%;
 }
 
 app-navigation .p-panel {
-	height: 100%;
-
-	border-radius: 0;
-	border-top: none;
-	border-left: none;
-	border-bottom: none;
+	border: none;
+	background-color: transparent;
 
 	padding-right: 15px;
 	padding-left: 15px;

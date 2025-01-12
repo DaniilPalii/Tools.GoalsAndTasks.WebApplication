@@ -7,10 +7,11 @@ import { Button } from 'primeng/button';
 import { IconField } from 'primeng/iconfield';
 import { InputIcon } from 'primeng/inputicon';
 import { InputText } from 'primeng/inputtext';
+import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
 
 @Component({
 	selector: 'app-header',
-	imports: [ CommonModule, FormsModule, RouterModule, Toolbar, Button, IconField, InputIcon, InputText ],
+	imports: [ CommonModule, FormsModule, RouterModule, Toolbar, Button, IconField, InputIcon, InputText, ThemeToggleComponent ],
 	templateUrl: './header.component.html',
 	styleUrl: './header.component.css',
 	encapsulation: ViewEncapsulation.None,
