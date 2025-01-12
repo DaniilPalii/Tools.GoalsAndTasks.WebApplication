@@ -13,3 +13,10 @@
 	display: flex;
 	flex-direction: column;
 }
+
+.background-image {
+	background-image: url(https://www.primefaces.org/cdn/primevue/images/layout/pattern.png);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: auto 20rem;
+}
