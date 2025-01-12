@@ -5,10 +5,9 @@ import { TaskDetails } from './task-details';
 
 @Injectable({ providedIn: 'root' })
 export class TaskService {
-	private readonly apiUrl: string = 'https://goalsandtasksapi.azurewebsites.net/tasks';
 	private readonly http = inject(HttpClient);
 
 	public getTasks(): Observable<TaskDetails[]> {
-		return this.http.get<TaskDetails[]>(this.apiUrl);
+		return this.http.get<TaskDetails[]>('tasks');
 	}
 }
