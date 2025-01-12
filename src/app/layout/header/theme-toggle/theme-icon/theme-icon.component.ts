@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
-import { Theme } from '../../../../../services/theme.service';
 import { NgSwitch, NgSwitchCase } from '@angular/common';
+import { Theme } from '../../../../theming/theme';
 
 @Component({
 	selector: 'app-theme-icon',

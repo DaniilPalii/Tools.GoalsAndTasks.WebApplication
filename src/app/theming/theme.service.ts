@@ -8,8 +8,8 @@ import { PrimeNG, ThemeType } from 'primeng/config';
 export class ThemeService {
 	private static readonly darkThemeClass = 'app-dark';
 
-	private document = inject(DOCUMENT);
-	private primeNg = inject(PrimeNG);
+	private readonly document = inject(DOCUMENT);
+	private readonly primeNg = inject(PrimeNG);
 
 	public static createThemeWithManualDarkMode(): ThemeType {
 		return this.createThemeWithDarkModeSelector(`.${this.darkThemeClass}`);
@@ -53,10 +53,4 @@ export class ThemeService {
 	private setTheme(theme: ThemeType): void {
 		this.primeNg.setThemeConfig({ theme: theme });
 	}
-}
-
-export enum Theme {
-	system = 1,
-	light = 2,
-	dark = 3,
 }

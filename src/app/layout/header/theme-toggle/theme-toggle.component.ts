@@ -1,8 +1,9 @@
 import { Component, effect, inject, signal } from '@angular/core';
 import { Select } from 'primeng/select';
 import { FormsModule } from '@angular/forms';
-import { Theme, ThemeService } from '../../../../services/theme.service';
 import { ThemeIconComponent } from './theme-icon/theme-icon.component';
+import { Theme } from '../../../theming/theme';
+import { ThemeService } from '../../../theming/theme.service';
 
 @Component({
 	selector: 'app-theme-toggle',
@@ -29,17 +30,5 @@ export class ThemeToggleComponent {
 					break;
 			}
 		});
-	}
-
-	public setSystemTheme(): void {
-		this.themeService.setSystemTheme();
-	}
-
-	public setLightTheme(): void {
-		this.themeService.setLightTheme();
-	}
-
-	public setDarkTheme(): void {
-		this.themeService.setDarkTheme();
 	}
 }

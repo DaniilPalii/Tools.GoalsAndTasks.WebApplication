@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { Card } from 'primeng/card';
-import { TaskDetails } from '../../transfer-values/task-details';
-import { TaskService } from '../../services/task.service';
+import { TaskDetails } from '../../transfer/task-details';
+import { TaskService } from '../../transfer/task.service';
 
 @Component({
 	selector: 'app-task-list',
@@ -13,8 +13,7 @@ import { TaskService } from '../../services/task.service';
 })
 export class TaskListComponent implements OnInit {
 	public tasks: TaskDetails[] = [];
-
-	public constructor(private taskService: TaskService) { }
+	private readonly taskService = inject(TaskService);
 
 	public ngOnInit(): void {
 		this.taskService.getTasks().subscribe((tasks: TaskDetails[]) => {
