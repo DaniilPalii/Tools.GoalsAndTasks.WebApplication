@@ -6,3 +6,13 @@ body {
 	height: 100%;
 	margin: 0; /* Override browser default style */
 }
+
+.horizontal-flex {
+	display: flex;
+	flex-direction: row;
+}
+
+.vertical-flex {
+	display: flex;
+	flex-direction: column;
+}

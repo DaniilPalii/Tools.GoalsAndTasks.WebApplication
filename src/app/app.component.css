@@ -4,16 +4,6 @@
 	padding-right: 35px;
 }
 
-.horizontal-flex {
-	display: flex;
-	flex-direction: row;
-}
-
-.vertical-flex {
-	display: flex;
-	flex-direction: column;
-}
-
 .background-image {
 	background-image: url(https://www.primefaces.org/cdn/primevue/images/layout/pattern.png);
 	background-position: top;
