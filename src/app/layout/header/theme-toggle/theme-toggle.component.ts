@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ThemeIconComponent } from './theme-icon/theme-icon.component';
 import { Theme } from '../../../theming/theme';
 import { ThemeService } from 'app/theming/theme.service';
+import { ThemeToggleItem } from './theme-toggle-item';
 
 @Component({
 	selector: 'app-theme-toggle',
@@ -11,14 +12,20 @@ import { ThemeService } from 'app/theming/theme.service';
 	templateUrl: './theme-toggle.component.html',
 })
 export class ThemeToggleComponent {
-	public readonly themes = [ Theme.system, Theme.light, Theme.dark ];
-	public selectedTheme = signal(Theme.system);
+
+	public readonly themeItems: ThemeToggleItem[] = [
+		{ theme: Theme.system, title: 'System theme' },
+		{ theme: Theme.light, title: 'Light theme' },
+		{ theme: Theme.dark, title: 'Dark theme' },
+	];
+
+	public selectedThemeItem = signal(this.themeItems[0]);
 
 	private readonly themeService = inject(ThemeService);
 
 	public constructor() {
 		effect(() => {
-			switch (this.selectedTheme()) {
+			switch (this.selectedThemeItem().theme) {
 				case Theme.system:
 					this.themeService.setSystemTheme();
 					break;

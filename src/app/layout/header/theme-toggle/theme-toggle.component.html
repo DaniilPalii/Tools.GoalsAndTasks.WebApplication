@@ -1,13 +1,16 @@
 <p-select
-	[(ngModel)]="selectedTheme"
-	[options]="themes"
+	[(ngModel)]="selectedThemeItem"
+	[options]="themeItems"
 	styleClass="hidden-dropdown"
 >
 	<ng-template #item let-option>
-		<app-theme-icon [theme]="option"/>
+		<div style="display: flex; gap: 0.8em;">
+			<app-theme-icon [theme]="option.theme"/>
+			<span>{{ option.title }}</span>
+		</div>
 	</ng-template>
 
 	<ng-template #selectedItem let-selectedOption>
-		<app-theme-icon [theme]="selectedOption"/>
+		<app-theme-icon [theme]="selectedOption.theme"/>
 	</ng-template>
 </p-select>
