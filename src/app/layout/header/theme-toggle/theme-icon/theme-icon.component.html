@@ -1,8 +1,11 @@
-<span class="horizontal-flex" style="align-items: center">
+<span
+	class="horizontal-flex"
+	style="align-items: center; gap: 5px;"
+>
 	<ng-container [ngSwitch]="theme()">
 		<ng-container *ngSwitchCase="Theme.system">
 			<span class="pi pi-sun"></span>
-			<span>&nbsp;/&nbsp;</span>
+			<span>/</span>
 			<span class="pi pi-moon"></span>
 		</ng-container>
 
