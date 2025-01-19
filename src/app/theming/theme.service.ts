@@ -12,14 +12,14 @@ export class ThemeService {
 	private readonly primeNg = inject(PrimeNG);
 
 	public static createThemeWithManualDarkMode(): ThemeType {
-		return this.createThemeWithDarkModeSelector(`.${this.darkThemeClass}`);
+		return this.createTheme(`.${this.darkThemeClass}`);
 	}
 
 	public static createThemeWithAutomaticDarkMode(): ThemeType {
-		return this.createThemeWithDarkModeSelector('system');
+		return this.createTheme('system');
 	}
 
-	private static createThemeWithDarkModeSelector(darkModeSelector: string): ThemeType {
+	private static createTheme(darkModeSelector: string): ThemeType {
 		return {
 			preset: definePreset(auraPreset),
 			options: {
