@@ -1,6 +1,6 @@
-import { Theme } from 'app/theming/theme';
+import { ThemeKind } from '../../../theming/theme-kind';
 
 export interface ThemeToggleItem {
-	theme: Theme;
+	theme: ThemeKind;
 	title: string;
 }

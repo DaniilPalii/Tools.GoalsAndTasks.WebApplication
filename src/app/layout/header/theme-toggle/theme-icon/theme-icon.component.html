@@ -3,17 +3,17 @@
 	style="align-items: center; gap: 5px;"
 >
 	<ng-container [ngSwitch]="theme()">
-		<ng-container *ngSwitchCase="Theme.system">
+		<ng-container *ngSwitchCase="ThemeKind.system">
 			<span class="pi pi-sun"></span>
 			<span>/</span>
 			<span class="pi pi-moon"></span>
 		</ng-container>
 
-		<ng-container *ngSwitchCase="Theme.light">
+		<ng-container *ngSwitchCase="ThemeKind.light">
 			<span class="pi pi-sun"></span>
 		</ng-container>
 
-		<ng-container *ngSwitchCase="Theme.dark">
+		<ng-container *ngSwitchCase="ThemeKind.dark">
 			<span class="pi pi-moon"></span>
 		</ng-container>
 	</ng-container>

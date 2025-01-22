@@ -2,9 +2,9 @@ import { Component, effect, inject, signal } from '@angular/core';
 import { Select } from 'primeng/select';
 import { FormsModule } from '@angular/forms';
 import { ThemeIconComponent } from './theme-icon/theme-icon.component';
-import { Theme } from '../../../theming/theme';
 import { ThemeService } from 'app/theming/theme.service';
 import { ThemeToggleItem } from './theme-toggle-item';
+import { ThemeKind } from '../../../theming/theme-kind';
 
 @Component({
 	selector: 'app-theme-toggle',
@@ -14,9 +14,9 @@ import { ThemeToggleItem } from './theme-toggle-item';
 export class ThemeToggleComponent {
 
 	public readonly themeItems: ThemeToggleItem[] = [
-		{ theme: Theme.system, title: 'System theme' },
-		{ theme: Theme.light, title: 'Light theme' },
-		{ theme: Theme.dark, title: 'Dark theme' },
+		{ theme: ThemeKind.system, title: 'System theme' },
+		{ theme: ThemeKind.light, title: 'Light theme' },
+		{ theme: ThemeKind.dark, title: 'Dark theme' },
 	];
 
 	public selectedThemeItem = signal(this.themeItems[0]);
@@ -26,13 +26,13 @@ export class ThemeToggleComponent {
 	public constructor() {
 		effect(() => {
 			switch (this.selectedThemeItem().theme) {
-				case Theme.system:
+				case ThemeKind.system:
 					this.themeService.setSystemTheme();
 					break;
-				case Theme.light:
+				case ThemeKind.light:
 					this.themeService.setLightTheme();
 					break;
-				case Theme.dark:
+				case ThemeKind.dark:
 					this.themeService.setDarkTheme();
 					break;
 			}
