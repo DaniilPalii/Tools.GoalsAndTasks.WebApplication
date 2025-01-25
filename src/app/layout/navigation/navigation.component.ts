@@ -1,12 +1,10 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { Panel } from 'primeng/panel';
+import { Component } from '@angular/core';
+import { NavigationItemComponent } from './navigation-item/navigation-item.component';
 
 @Component({
 	selector: 'app-navigation',
-	imports: [ Panel ],
+	imports: [ NavigationItemComponent ],
 	templateUrl: './navigation.component.html',
-	styleUrl: './navigation.component.css',
-	encapsulation: ViewEncapsulation.None,
 })
 export class NavigationComponent {
 
