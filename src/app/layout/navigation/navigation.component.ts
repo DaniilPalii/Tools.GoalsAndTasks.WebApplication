@@ -6,6 +6,4 @@ import { NavigationItemComponent } from './navigation-item/navigation-item.compo
 	imports: [ NavigationItemComponent ],
 	templateUrl: './navigation.component.html',
 })
-export class NavigationComponent {
-
-}
+export class NavigationComponent {}
