@@ -1,36 +1,11 @@
-<p>task-details works!</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-	labore
-	et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-	aliquip ex ea commodo consequat.
-</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-	labore
-	et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-	aliquip ex ea commodo consequat.
-</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-	labore
-	et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-	aliquip ex ea commodo consequat.
-</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-	labore
-	et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-	aliquip ex ea commodo consequat.
-</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-	labore
-	et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-	aliquip ex ea commodo consequat.
-</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-	labore
-	et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-	aliquip ex ea commodo consequat.
-</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-	labore
-	et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-	aliquip ex ea commodo consequat.
-</p>
+<div *ngIf="task$ | async as task">
+	<h1>{{ task.title }}</h1>
+	<p-card>
+		<p>ID: {{ task.id }}</p>
+		<p>Start date: {{ task.startDate }}</p>
+		<p>Start time: {{ task.startTime }}</p>
+		<p>Due date: {{ task.dueDate }}</p>
+		<p>Due time: {{ task.dueTime }}</p>
+		<p>Is complete: {{ task.isComplete }}</p>
+	</p-card>
+</div>

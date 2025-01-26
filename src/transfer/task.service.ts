@@ -10,4 +10,8 @@ export class TaskService {
 	public getTasks(): Observable<TaskDetails[]> {
 		return this.http.get<TaskDetails[]>('tasks');
 	}
+
+	public getTask(id: number): Observable<TaskDetails> {
+		return this.http.get<TaskDetails>(`tasks/${id}`);
+	}
 }
