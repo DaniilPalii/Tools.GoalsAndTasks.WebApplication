@@ -25,6 +25,6 @@ export class TaskListComponent implements OnInit {
 	}
 
 	public navigateTo(taskId: number): void {
-		this.router.navigate([ 'tasks/1' ]);
+		this.router.navigate([ 'tasks', taskId ]);
 	}
 }
