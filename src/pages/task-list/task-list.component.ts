@@ -7,15 +7,17 @@ import { TaskService } from 'transfer/task.service';
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { Router } from '@angular/router';
+import { Panel } from 'primeng/panel';
 
 @Component({
 	selector: 'app-task-list',
-	imports: [ ButtonModule, TableModule, Card, AsyncPipe ],
+	imports: [ ButtonModule, TableModule, Card, AsyncPipe, Panel ],
 	templateUrl: './task-list.component.html',
 	styleUrl: './task-list.component.css',
 })
 export class TaskListComponent implements OnInit {
 	public tasks$!: Observable<TaskDetails[]>;
+	public doesCreatingTask = false;
 
 	private readonly taskService = inject(TaskService);
 	private readonly router = inject(Router);
@@ -24,7 +26,7 @@ export class TaskListComponent implements OnInit {
 		this.tasks$ = this.taskService.getTasks();
 	}
 
-	public navigateTo(taskId: number): void {
+	public navigateToTask(taskId: number): void {
 		this.router.navigate([ 'tasks', taskId ]);
 	}
 }
