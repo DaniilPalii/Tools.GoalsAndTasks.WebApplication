@@ -20,3 +20,12 @@ body {
 .card-padding {
 	padding: var(--app-card-body-padding);
 }
+
+.gap-1 {
+	gap: 1rem;
+}
+
+label + input,
+label + p-date-picker {
+	margin-top: 0.5rem;
+}

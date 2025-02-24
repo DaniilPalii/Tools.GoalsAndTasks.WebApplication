@@ -1,9 +1,9 @@
-import { Component, inject, Input } from '@angular/core';
-import { Observable } from 'rxjs';
-import { TaskDetails } from '../../transfer/task-details';
-import { TaskService } from '../../transfer/task.service';
 import { AsyncPipe, NgIf } from '@angular/common';
+import { Component, inject, Input } from '@angular/core';
 import { Card } from 'primeng/card';
+import { Observable } from 'rxjs';
+import { TaskDetails } from 'transfer/task-details';
+import { TaskService } from 'transfer/task.service';
 
 @Component({
 	selector: 'app-task-details',

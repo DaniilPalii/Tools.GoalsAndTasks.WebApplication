@@ -1,0 +1,39 @@
+<form
+	[formGroup]="taskFormGroup"
+	class="vertical-flex gap-1"
+	style="gap: 1rem; padding-top: 0.5rem;"
+	(ngSubmit)="saveTask()"
+>
+	<div class="vertical-flex">
+		<label for="title">Title</label>
+		<input pInputText id="title" formControlName="title" type="text" variant="filled" />
+	</div>
+
+	<div class="vertical-flex">
+		<label for="startDate">Start Date</label>
+		<p-date-picker id="startDate" formControlName="startDate" type="date" variant="filled" />
+	</div>
+
+	<div class="vertical-flex">
+		<label for="startTime">Start Time</label>
+		<input pInputText id="startTime" formControlName="startTime" type="time" variant="filled" />
+	</div>
+
+	<div class="vertical-flex">
+		<label for="dueDate">Due Date</label>
+		<p-date-picker id="dueDate" formControlName="dueDate" type="date" variant="filled" />
+	</div>
+
+	<div class="vertical-flex">
+		<label for="dueTime">Due Time</label>
+		<input pInputText id="dueTime" formControlName="dueTime" type="time" variant="filled" />
+	</div>
+
+	<div
+		class="horizontal-flex gap-1"
+		style="margin-top: 0.5rem;"
+	>
+		<p-button type="submit">Submit</p-button>
+		<p-button severity="secondary" type="reset">Cancel</p-button>
+	</div>
+</form>

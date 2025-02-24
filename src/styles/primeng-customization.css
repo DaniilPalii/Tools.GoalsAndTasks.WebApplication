@@ -1,3 +1,8 @@
 .p-select.hidden-dropdown .p-select-dropdown {
 	display: none;
 }
+
+.p-inputtext[type=time],
+p-date-picker {
+	width: 12rem;
+}

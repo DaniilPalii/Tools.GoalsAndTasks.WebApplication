@@ -41,9 +41,9 @@
 				(click)="doesCreatingTask = true"
 			/>
 		} @else {
-			<p-panel>
-				Adding task
-			</p-panel>
+			<p-fieldset legend="Adding task">
+				<app-task-form />
+			</p-fieldset>
 		}
 	</div>
 </p-card>
