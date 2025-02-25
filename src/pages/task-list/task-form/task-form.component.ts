@@ -1,6 +1,7 @@
 import { Component, DestroyRef, inject, output } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MessageService } from 'primeng/api';
 import { Button } from 'primeng/button';
 import { DatePicker } from 'primeng/datepicker';
 import { InputText } from 'primeng/inputtext';
@@ -16,6 +17,7 @@ export class TaskFormComponent {
 	private readonly taskService = inject(TaskService);
 	private readonly formBuilder = inject(NonNullableFormBuilder);
 	private readonly destroyRef = inject(DestroyRef);
+	private readonly messageService = inject(MessageService);
 
 	private task: TaskDetails = {
 		id: 0,
@@ -50,9 +52,16 @@ export class TaskFormComponent {
 				next: (addedTask: TaskDetails) => {
 					this.taskFormGroup.reset();
 					this.saved.emit(addedTask);
+					this.messageService.add({
+						summary: 'Task saved',
+						severity: 'success',
+					});
 				},
 				error: (error) => {
-					console.error('Failed to save task', error);
+					this.messageService.add({
+						summary: 'Failed to save task',
+						severity: 'error',
+					});
 				}
 			});
 	}

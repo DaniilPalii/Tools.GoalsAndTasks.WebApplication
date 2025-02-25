@@ -1,3 +1,4 @@
+import { MessageService } from 'primeng/api';
 import { routes } from './app.routes';
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
@@ -22,5 +23,6 @@ export const appConfig: ApplicationConfig = {
 		providePrimeNG({
 			theme: ThemeService.createThemeWithAutomaticDarkMode(),
 		}),
+		MessageService,
 	],
 };
