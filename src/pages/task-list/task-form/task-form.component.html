@@ -34,6 +34,6 @@
 		style="margin-top: 0.5rem;"
 	>
 		<p-button type="submit">Submit</p-button>
-		<p-button severity="secondary" type="reset">Cancel</p-button>
+		<p-button severity="secondary" type="reset" (click)="canceled.emit()">Cancel</p-button>
 	</div>
 </form>

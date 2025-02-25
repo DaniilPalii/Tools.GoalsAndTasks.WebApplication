@@ -35,6 +35,7 @@ export class TaskFormComponent {
 	});
 
 	protected saved = output<TaskDetails>();
+	protected canceled = output();
 
 	protected saveTask(): void {
 		this.taskService

@@ -44,7 +44,10 @@
 			/>
 		} @else {
 			<p-fieldset legend="Adding task">
-				<app-task-form (saved)="doesCreatingTask = false; tasks.push($event)" />
+				<app-task-form
+					(saved)="doesCreatingTask = false; tasks.push($event)"
+					(canceled)="doesCreatingTask = false"
+				/>
 			</p-fieldset>
 		}
 	</div>
