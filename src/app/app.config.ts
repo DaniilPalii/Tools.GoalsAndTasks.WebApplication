@@ -6,7 +6,7 @@ import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
 import { ThemeService } from './theming/theme.service';
-import { baseUrlInterceptor } from '../transfer/base-url.interceptor';
+import { baseUrlInterceptor } from 'transfer/base-url.interceptor';
 
 export const appConfig: ApplicationConfig = {
 	providers: [
