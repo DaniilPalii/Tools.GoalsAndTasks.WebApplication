@@ -2,6 +2,7 @@ import { Component, DestroyRef, inject, output } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MessageService } from 'primeng/api';
+import { AutoFocus } from 'primeng/autofocus';
 import { Button } from 'primeng/button';
 import { DatePicker } from 'primeng/datepicker';
 import { InputText } from 'primeng/inputtext';
@@ -10,7 +11,7 @@ import { TaskService } from 'transfer/task.service';
 
 @Component({
 	selector: 'app-task-form',
-	imports: [ ReactiveFormsModule, InputText, DatePicker, Button ],
+	imports: [ ReactiveFormsModule, InputText, DatePicker, Button, AutoFocus ],
 	templateUrl: './task-form.component.html',
 })
 export class TaskFormComponent {
