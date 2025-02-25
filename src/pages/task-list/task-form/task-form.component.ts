@@ -1,4 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component, DestroyRef, inject, output } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Button } from 'primeng/button';
 import { DatePicker } from 'primeng/datepicker';
@@ -14,6 +15,7 @@ import { TaskService } from 'transfer/task.service';
 export class TaskFormComponent {
 	private readonly taskService = inject(TaskService);
 	private readonly formBuilder = inject(NonNullableFormBuilder);
+	private readonly destroyRef = inject(DestroyRef);
 
 	private task: TaskDetails = {
 		id: 0,
@@ -29,18 +31,29 @@ export class TaskFormComponent {
 		dueTime: this.formBuilder.control(this.task.dueTime),
 	});
 
+	protected saved = output<TaskDetails>();
+
 	protected saveTask(): void {
-		this.taskService.addTask({
-			title: this.taskFormGroup.value.title!,
-			startDate: this.taskFormGroup.value.startDate,
-			startTime: this.taskFormGroup.value.startTime,
-			dueDate: this.taskFormGroup.value.dueDate,
-			dueTime: this.taskFormGroup.value.dueTime,
-			id: this.task.id,
-			isComplete: this.task.isComplete,
-		}).subscribe({
-			next: (res) => console.log(res),
-			error: (err) => console.log(err),
-		});
+		this.taskService
+			.addTask({
+				title: this.taskFormGroup.value.title!,
+				startDate: this.taskFormGroup.value.startDate,
+				startTime: this.taskFormGroup.value.startTime,
+				dueDate: this.taskFormGroup.value.dueDate,
+				dueTime: this.taskFormGroup.value.dueTime,
+				id: this.task.id,
+				isComplete: this.task.isComplete,
+			})
+			.pipe(
+				takeUntilDestroyed(this.destroyRef))
+			.subscribe({
+				next: (addedTask: TaskDetails) => {
+					this.taskFormGroup.reset();
+					this.saved.emit(addedTask);
+				},
+				error: (error) => {
+					console.error('Failed to save task', error);
+				}
+			});
 	}
 }

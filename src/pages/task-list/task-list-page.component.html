@@ -2,7 +2,9 @@
 
 <p-card>
 	<div class="vertical-flex" style="gap: 1rem">
-		@if (tasks$ | async; as tasks) {
+		@if (loading) {
+			<span>...loading</span>
+		} @else {
 			<p-table
 				[tableStyle]="{ 'min-width': '50rem' }"
 				[value]="tasks"
@@ -42,7 +44,7 @@
 			/>
 		} @else {
 			<p-fieldset legend="Adding task">
-				<app-task-form />
+				<app-task-form (saved)="doesCreatingTask = false; tasks.push($event)" />
 			</p-fieldset>
 		}
 	</div>
